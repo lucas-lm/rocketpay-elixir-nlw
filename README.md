@@ -1,6 +1,7 @@
 # Rocketpay
 
 > For learning purposes only.
+
 API for payment and transactions between users developed in Rocketseat's Next Level Week #4 (Elixir).
 
 ## Prerequisites
@@ -28,7 +29,7 @@ These are the endpoits available for this project:
 
 | Method  | Endpoint                      | Body (JSON)                 | Response                        | 
 |---------|-------------------------------|-----------------------------|---------------------------------|
-| GET     | /api                          | No body                     | A text welcome message           |
+| GET     | /api                          | No body                     | A text welcome message          |
 | POST    | /api/users                    | [User](#user)               | User + Account data             |
 | POST    | /api/accounts/<:id>/deposit   | [Value](#value)             | User + Account data             |
 | POST    | /api/accounts/<:id>/withdraw  | [Value](#value)             | User + Account data             |
@@ -40,27 +41,27 @@ Details about data format to be sent in the body of the above requests.
 
 #### User
 
-| Key       | Value Type  | Description                                           |
-|-----------|-------------|-------------------------------------------------------|
-| name      | string      | User's name                                           |
-| age       | integer     | User's age. Must be greater than 18                   |
-| email     | string      | User's e-mail. Must a valid e-mail                    |
-| password  | string      | Secret password to login. Must be 6+ characters long  |
-| nickname  | string      | User's nickname. Must be unique                       |
+| Key       | Value Type  | Description                                           | Example               |
+|-----------|-------------|-------------------------------------------------------|-----------------------|
+| name      | string      | User's name                                           | `"Lucas"`             |
+| age       | integer     | User's age. Must be greater than 18                   | `25`                  |
+| email     | string      | User's e-mail. Must a valid e-mail                    | `"lucas@example.com"` |
+| password  | string      | Secret password to login. Must be 6+ characters long  | `"P@s5w0rD"`          |
+| nickname  | string      | User's nickname. Must be unique                       | `"lucasm"`            |
 
 #### Value
 
-| Key       | Value Type  | Description                             |
-|-----------|-------------|-----------------------------------------|
-| value     | string      | Monetary value. Must be a decimal value |
+| Key       | Value Type  | Description                             | Example   |
+|-----------|-------------|-----------------------------------------|-----------|
+| value     | string      | Monetary value. Must be a decimal value | `"31.00"` |
 
 #### Transaction
 
-| Key       | Value Type  | Description                             |
-|-----------|-------------|-----------------------------------------|
-| value     | string      | Monetary value. Must be a decimal value |
-| to        | string      | The payee's ID                          |
-| from      | string      | User's ID (who is giving money)         |
+| Key       | Value Type  | Description                             | Example   | 
+|-----------|-------------|-----------------------------------------|-----------|
+| value     | string      | Monetary value. Must be a decimal value | `"31.00"` |
+| to        | string      | The payee's ID                          | -         |
+| from      | string      | User's ID (who is giving money)         | -         |
 
 ## Learn more
 
